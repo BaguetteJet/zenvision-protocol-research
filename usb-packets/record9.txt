@@ -1,0 +1,2483 @@
+No.     Time           Source                Destination           Protocol Length Info
+   1217 19.582607      host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ASUS theme1 - speed 1
+Frame 1217: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80027bbf1010
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 1218]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 330101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+   1218 19.583233      2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ASUS theme1 - speed 1
+Frame 1218: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80027bbf1010
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 1217]
+    [Time from request: 626.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+   1219 19.583954      host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ASUS theme1 - speed 1
+Frame 1219: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80027bbf1010
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 1220]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300502000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+   1220 19.584202      2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ASUS theme1 - speed 1
+Frame 1220: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80027bbf1010
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 1219]
+    [Time from request: 248.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+   9726 108.064920     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ASUS theme1 - speed 2
+Frame 9726: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80029c6e6960
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 9730]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 330102000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+   9730 108.066035     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ASUS theme1 - speed 2
+Frame 9730: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80029c6e6960
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 9726]
+    [Time from request: 1.115000 milliseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+   9731 108.066502     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ASUS theme1 - speed 2
+Frame 9731: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002806d49a0
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 9732]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300502000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+   9732 108.067025     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ASUS theme1 - speed 2
+Frame 9732: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002806d49a0
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 9731]
+    [Time from request: 523.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  14928 151.103801     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ASUS theme1 - speed 3
+Frame 14928: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800292be3a10
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 14932]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 330103000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  14932 151.104167     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ASUS theme1 - speed 3
+Frame 14932: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800292be3a10
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 14928]
+    [Time from request: 366.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  14933 151.104947     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ASUS theme1 - speed 3
+Frame 14933: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80029d1c9a10
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 14934]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300502000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  14934 151.105308     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ASUS theme1 - speed 3
+Frame 14934: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80029d1c9a10
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 14933]
+    [Time from request: 361.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  19054 190.606745     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ASUS theme2 - speed 2
+Frame 19054: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80029e2caa10
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 19058]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 330102000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  19058 190.607128     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ASUS theme2 - speed 2
+Frame 19058: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80029e2caa10
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 19054]
+    [Time from request: 383.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  19059 190.607482     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ASUS theme2 - speed 2
+Frame 19059: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800286bcca20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 19060]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300502000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  19060 190.608105     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ASUS theme2 - speed 2
+Frame 19060: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800286bcca20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 19059]
+    [Time from request: 623.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  23229 232.895466     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ASUS theme3 - speed 2
+Frame 23229: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002899d4420
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 23231]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 330102000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  23231 232.895896     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ASUS theme3 - speed 2
+Frame 23231: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002899d4420
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 23229]
+    [Time from request: 430.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  23235 232.896627     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ASUS theme3 - speed 2
+Frame 23235: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800290ad9420
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 23236]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300502000300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  23236 232.896837     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ASUS theme3 - speed 2
+Frame 23236: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800290ad9420
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 23235]
+    [Time from request: 210.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  28301 281.776512     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ASUS theme4 - speed 3
+Frame 28301: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002873dc290
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 28306]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 330103000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  28306 281.777377     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ASUS theme4 - speed 3
+Frame 28306: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002873dc290
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 28301]
+    [Time from request: 865.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  28307 281.777969     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ASUS theme4 - speed 3
+Frame 28307: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002a06e1290
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 28308]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300502000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  28308 281.778377     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ASUS theme4 - speed 3
+Frame 28308: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002a06e1290
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 28307]
+    [Time from request: 408.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  32349 330.078268     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 24hr - battery status on - speed 2 - time ~2026 Sep 14 19:21
+Frame 32349: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002852eda10
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 32354]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300504000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  32354 330.078816     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 24hr - battery status on - speed 2 - time ~2026 Sep 14 19:21
+Frame 32354: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002852eda10
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 32349]
+    [Time from request: 548.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  32401 330.293322     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 24hr - battery status on - speed 2 - time ~2026 Sep 14 19:21
+Frame 32401: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800276486920
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 32402]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 330102000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  32402 330.293848     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 24hr - battery status on - speed 2 - time ~2026 Sep 14 19:21
+Frame 32402: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800276486920
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 32401]
+    [Time from request: 526.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  32403 330.294360     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 24hr - battery status on - speed 2 - time ~2026 Sep 14 19:21
+Frame 32403: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80027988a920
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 32404]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300501010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  32404 330.295007     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 24hr - battery status on - speed 2 - time ~2026 Sep 14 19:21
+Frame 32404: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80027988a920
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 32403]
+    [Time from request: 647.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  32405 330.295387     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 24hr - battery status on - speed 2 - time ~2026 Sep 14 19:21
+Frame 32405: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80029ce889e0
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 32406]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 4009ea07090e131529010100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  32406 330.295957     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 24hr - battery status on - speed 2 - time ~2026 Sep 14 19:21
+Frame 32406: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80029ce889e0
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 32405]
+    [Time from request: 570.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  43889 489.227119     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 12hr - battery status on - speed 2 - time ~2026 Sep 14 19:24
+Frame 43889: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002a0af9a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 43890]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300504000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  43890 489.227521     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 12hr - battery status on - speed 2 - time ~2026 Sep 14 19:24
+Frame 43890: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002a0af9a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 43889]
+    [Time from request: 402.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  43891 489.431845     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 12hr - battery status on - speed 2 - time ~2026 Sep 14 19:24
+Frame 43891: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80028eed4a40
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 43892]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 330102000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  43892 489.432631     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 12hr - battery status on - speed 2 - time ~2026 Sep 14 19:24
+Frame 43892: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80028eed4a40
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 43891]
+    [Time from request: 786.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  43893 489.433092     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 12hr - battery status on - speed 2 - time ~2026 Sep 14 19:24
+Frame 43893: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80027705ba20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 43894]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300501010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  43894 489.433559     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 12hr - battery status on - speed 2 - time ~2026 Sep 14 19:24
+Frame 43894: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80027705ba20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 43893]
+    [Time from request: 467.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  43895 489.433965     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 12hr - battery status on - speed 2 - time ~2026 Sep 14 19:24
+Frame 43895: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800281466a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 43896]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 4009ea07090e131814000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  43896 489.434571     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 12hr - battery status on - speed 2 - time ~2026 Sep 14 19:24
+Frame 43896: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800281466a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 43895]
+    [Time from request: 606.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  51458 578.848021     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 24hr - battery status off - speed 2 - time ~2026 Sep 14 19:25
+Frame 51458: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80029b6da680
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 51462]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300504000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  51462 578.849158     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 24hr - battery status off - speed 2 - time ~2026 Sep 14 19:25
+Frame 51462: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80029b6da680
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 51458]
+    [Time from request: 1.137000 milliseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  51463 579.053022     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 24hr - battery status off - speed 2 - time ~2026 Sep 14 19:25
+Frame 51463: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800296fc8a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 51464]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 330102000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  51464 579.054152     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 24hr - battery status off - speed 2 - time ~2026 Sep 14 19:25
+Frame 51464: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800296fc8a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 51463]
+    [Time from request: 1.130000 milliseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  51465 579.055879     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 24hr - battery status off - speed 2 - time ~2026 Sep 14 19:25
+Frame 51465: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80026e7a5790
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 51466]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300501010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  51466 579.057145     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 24hr - battery status off - speed 2 - time ~2026 Sep 14 19:25
+Frame 51466: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80026e7a5790
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 51465]
+    [Time from request: 1.266000 milliseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  51467 579.058036     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 24hr - battery status off - speed 2 - time ~2026 Sep 14 19:25
+Frame 51467: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80028fceb790
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 51468]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 4009ea07090e131932010100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  51468 579.059158     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Time mode 1 - time format 24hr - battery status off - speed 2 - time ~2026 Sep 14 19:25
+Frame 51468: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80028fceb790
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 51467]
+    [Time from request: 1.122000 milliseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  58730 648.344948     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Time mode 2 - time format 24hr - speed 2 - time ~2026 Sep 14 19:27
+Frame 58730: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800284fe4a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 58734]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 310202030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  58734 648.345649     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Time mode 2 - time format 24hr - speed 2 - time ~2026 Sep 14 19:27
+Frame 58734: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800284fe4a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 58730]
+    [Time from request: 701.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  58735 648.346186     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Time mode 2 - time format 24hr - speed 2 - time ~2026 Sep 14 19:27
+Frame 58735: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800296ff4a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 58736]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300501020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  58736 648.346722     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Time mode 2 - time format 24hr - speed 2 - time ~2026 Sep 14 19:27
+Frame 58736: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800296ff4a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 58735]
+    [Time from request: 536.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  58737 648.347200     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Time mode 2 - time format 24hr - speed 2 - time ~2026 Sep 14 19:27
+Frame 58737: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800279922510
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 58738]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 4009ea07090e131a3b010100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  58738 648.348786     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Time mode 2 - time format 24hr - speed 2 - time ~2026 Sep 14 19:27
+Frame 58738: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800279922510
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 58737]
+    [Time from request: 1.586000 milliseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  65671 742.814033     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE - filter hatch door
+Frame 65671: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800288deca20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 65672]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 310200040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  65672 742.814878     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE - filter hatch door
+Frame 65672: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800288deca20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 65671]
+    [Time from request: 845.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  65673 742.821975     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE - filter hatch door
+Frame 65673: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80028b8dda20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 65674]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300605000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  65674 742.822884     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE - filter hatch door
+Frame 65674: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80028b8dda20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 65673]
+    [Time from request: 909.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  76867 828.493275     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE - filter circuit
+Frame 76867: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800272c8aa20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 76868]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 310200040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  76868 828.494240     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE - filter circuit
+Frame 76868: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800272c8aa20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 76867]
+    [Time from request: 965.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  76871 828.500542     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE - filter circuit
+Frame 76871: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800272c8aa20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 76872]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300605000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  76872 828.501264     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE - filter circuit
+Frame 76872: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800272c8aa20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 76871]
+    [Time from request: 722.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  82589 868.776644     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE - filter scout
+Frame 82589: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800272c8aa20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 82590]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 310200040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  82590 868.777403     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE - filter scout
+Frame 82590: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800272c8aa20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 82589]
+    [Time from request: 759.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  82591 868.781710     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE - filter scout
+Frame 82591: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800272c8aa20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 82592]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300605000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  82592 868.782380     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE - filter scout
+Frame 82592: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800272c8aa20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 82591]
+    [Time from request: 670.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  88053 907.436657     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE - filter geomagnetic sandstorm
+Frame 88053: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800272c8aa20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 88054]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 310200040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  88054 907.437428     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE - filter geomagnetic sandstorm
+Frame 88054: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800272c8aa20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 88053]
+    [Time from request: 771.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+  88055 907.443311     host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE - filter geomagnetic sandstorm
+Frame 88055: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800272c8aa20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 88056]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300605000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+  88056 907.444386     2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE - filter geomagnetic sandstorm
+Frame 88056: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800272c8aa20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 88055]
+    [Time from request: 1.075000 milliseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 114457 1101.579116    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE2 - filter scout
+Frame 114457: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002928c7a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 114458]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 310200040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 114458 1101.579472    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE2 - filter scout
+Frame 114458: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002928c7a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 114457]
+    [Time from request: 356.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 114459 1101.585942    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE2 - filter scout
+Frame 114459: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002928c7a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 114460]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300605000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 114460 1101.587590    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Customized SAMPLE_IMAGE2 - filter scout
+Frame 114460: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002928c7a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 114459]
+    [Time from request: 1.648000 milliseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 123075 1180.556596    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Text Template 2 - speed 2 - filter news ticker
+Frame 123075: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80026e7a5790
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 123076]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 310200040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 123076 1180.557627    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Text Template 2 - speed 2 - filter news ticker
+Frame 123076: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80026e7a5790
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 123075]
+    [Time from request: 1.031000 milliseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 123077 1180.558158    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Text Template 2 - speed 2 - filter news ticker
+Frame 123077: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80026e7a5790
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 123078]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300605000000000300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 123078 1180.558700    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Text Template 2 - speed 2 - filter news ticker
+Frame 123078: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80026e7a5790
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 123077]
+    [Time from request: 542.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 123081 1180.574286    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Text Template 2 - speed 2 - filter news ticker
+Frame 123081: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80026e7a5790
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 123082]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 330102000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 123082 1180.574630    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Text Template 2 - speed 2 - filter news ticker
+Frame 123082: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80026e7a5790
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 123081]
+    [Time from request: 344.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 129688 1252.633905    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Text Template 2 - speed 2 - filter none
+Frame 129688: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800296fc8a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 129692]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300605000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 129692 1252.634979    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Text Template 2 - speed 2 - filter none
+Frame 129692: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800296fc8a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 129688]
+    [Time from request: 1.074000 milliseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 129695 1252.656940    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Text Template 2 - speed 2 - filter none
+Frame 129695: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800288deca20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 129696]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 310202030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 129696 1252.658067    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Text Template 2 - speed 2 - filter none
+Frame 129696: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800288deca20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 129695]
+    [Time from request: 1.127000 milliseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 135910 1340.368409    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Personal label 3 - heading Igor Kochanski - subheading on Scan QR Code - QR code generator on https://baguettejet.com
+Frame 135910: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800296fc8a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 135914]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 310200040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 135914 1340.368930    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Personal label 3 - heading Igor Kochanski - subheading on Scan QR Code - QR code generator on https://baguettejet.com
+Frame 135914: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800296fc8a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 135910]
+    [Time from request: 521.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 135915 1340.373618    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Personal label 3 - heading Igor Kochanski - subheading on Scan QR Code - QR code generator on https://baguettejet.com
+Frame 135915: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80029faa6a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 135916]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300605000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 135916 1340.374012    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Personal label 3 - heading Igor Kochanski - subheading on Scan QR Code - QR code generator on https://baguettejet.com
+Frame 135916: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff80029faa6a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 135915]
+    [Time from request: 394.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 147893 1488.064298    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Personal label 2 - heading To Infinity - subheading on and beyond - QR code generator on label02
+Frame 147893: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002978e7a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 147894]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 310200040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 147894 1488.064698    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Personal label 2 - heading To Infinity - subheading on and beyond - QR code generator on label02
+Frame 147894: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002978e7a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 147893]
+    [Time from request: 400.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 147895 1488.068418    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Personal label 2 - heading To Infinity - subheading on and beyond - QR code generator on label02
+Frame 147895: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002978e7a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 147896]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300605000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 147896 1488.068694    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Personal label 2 - heading To Infinity - subheading on and beyond - QR code generator on label02
+Frame 147896: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002978e7a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 147895]
+    [Time from request: 276.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 157297 1566.034840    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Personal label 1 - heading Life is sweet - subheading off - QR code generator off
+Frame 157297: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800296feda20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 157298]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 310200040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 157298 1566.035628    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Personal label 1 - heading Life is sweet - subheading off - QR code generator off
+Frame 157298: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800296feda20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 157297]
+    [Time from request: 788.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 157301 1566.039860    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Personal label 1 - heading Life is sweet - subheading off - QR code generator off
+Frame 157301: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800296feda20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 157302]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300605000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 157302 1566.040637    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Personal label 1 - heading Life is sweet - subheading off - QR code generator off
+Frame 157302: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800296feda20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 157301]
+    [Time from request: 777.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 164527 1626.657165    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Personal label 4 - heading MARTIN SAENZ - subheading on Product Manager@ASUS Crop - QR code generator on label04
+Frame 164527: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800296feda20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 164528]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 310200040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 164528 1626.658088    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Personal label 4 - heading MARTIN SAENZ - subheading on Product Manager@ASUS Crop - QR code generator on label04
+Frame 164528: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800296feda20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 164527]
+    [Time from request: 923.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 164529 1626.662363    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Personal label 4 - heading MARTIN SAENZ - subheading on Product Manager@ASUS Crop - QR code generator on label04
+Frame 164529: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800296feda20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 164530]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300605000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 164530 1626.662884    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Personal label 4 - heading MARTIN SAENZ - subheading on Product Manager@ASUS Crop - QR code generator on label04
+Frame 164530: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff800296feda20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 164529]
+    [Time from request: 521.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 173315 1685.037255    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Personal label 5 - heading DAVID SEBASTIAN - subheading off - QR code generator off
+Frame 173315: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002928c7a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 173316]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 310200040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 173316 1685.038116    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Personal label 5 - heading DAVID SEBASTIAN - subheading off - QR code generator off
+Frame 173316: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002928c7a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 173315]
+    [Time from request: 861.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 173319 1685.041269    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Personal label 5 - heading DAVID SEBASTIAN - subheading off - QR code generator off
+Frame 173319: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002928c7a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 173320]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300605000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 173320 1685.042127    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Personal label 5 - heading DAVID SEBASTIAN - subheading off - QR code generator off
+Frame 173320: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002928c7a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 173319]
+    [Time from request: 858.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 182871 1747.974019    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Personal label 6 - heading Giving is a - subheading off - QR code generator on label06
+Frame 182871: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002928c7a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 182872]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 310200040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 182872 1747.974373    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Personal label 6 - heading Giving is a - subheading off - QR code generator on label06
+Frame 182872: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002928c7a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 182871]
+    [Time from request: 354.000 microseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
+
+No.     Time           Source                Destination           Protocol Length Info
+ 182873 1747.977292    host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    Personal label 6 - heading Giving is a - subheading off - QR code generator on label06
+Frame 182873: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: host]
+    [Destination: 2.1.3]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002928c7a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x00, Direction: FDO -> PDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 512
+    [Response in: 182874]
+    [bInterfaceClass: Vendor Specific (0xff)]
+Leftover Capture Data […]: 300605000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+ 182874 1747.978494    2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    Personal label 6 - heading Giving is a - subheading off - QR code generator on label06
+Frame 182874: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+    [Source: 2.1.3]
+    [Destination: host]
+    USBPcap pseudoheader length: 27
+    IRP ID: 0xffff8002928c7a20
+    IRP USBD_STATUS: USBD_STATUS_SUCCESS (0x00000000)
+    URB Function: URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER (0x0009)
+    IRP information: 0x01, Direction: PDO -> FDO
+    URB bus id: 2
+    Device address: 1
+    Endpoint: 0x03, Direction: OUT
+    URB transfer type: URB_INTERRUPT (0x01)
+    Packet Data Length: 0
+    [Request in: 182873]
+    [Time from request: 1.202000 milliseconds]
+    [bInterfaceClass: Vendor Specific (0xff)]
