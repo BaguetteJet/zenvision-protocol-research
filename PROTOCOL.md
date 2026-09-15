@@ -19,6 +19,11 @@ bytes carry meaning. Nothing meaningful comes back on EP3 in response.
 
 ## Command reference
 
+Every command is a fixed **512-byte** interrupt-OUT transfer on EP `0x03`.
+Only the leading bytes shown per command carry meaning — everything after
+them is `0x00` padding out to the full 512 bytes. This applies to every
+command below, including the full-frame examples.
+
 ### `33 01 <speed>` — Set animation/effect speed
 ```
 33 01 01   speed 1
@@ -27,6 +32,12 @@ bytes carry meaning. Nothing meaningful comes back on EP3 in response.
 ```
 Confirmed across built-in themes, both clock modes, and text templates — the
 same speed command is reused for whatever content is currently active.
+
+**Full frame example (speed 2):**
+```
+33 01 02 00 00 00 00 00 00 00 00 00 00 00 00 00 ... (zero-padded to 512 bytes)
+```
+Only the first 3 bytes carry meaning; bytes 3–511 are `0x00`.
 
 ### `30 05 02 00 <idx>` — Select built-in ASUS theme
 ```
@@ -37,12 +48,24 @@ same speed command is reused for whatever content is currently active.
 ```
 Sent immediately after the matching `33 01 <speed>`.
 
+**Full frame example (Theme 3):**
+```
+30 05 02 00 03 00 00 00 00 00 00 00 00 00 00 00 ... (zero-padded to 512 bytes)
+```
+Only the first 5 bytes carry meaning; the rest of the 512-byte buffer is `0x00`.
+
 ### `30 05 01 <mode>` — Select clock layout mode
 ```
 30 05 01 01   Time mode 1
 30 05 01 02   Time mode 2
 ```
 Followed by a `33 01 <speed>` and a `40 09 ...` time-set command.
+
+**Full frame example (Time mode 2):**
+```
+30 05 01 02 00 00 00 00 00 00 00 00 00 00 00 00 ... (zero-padded to 512 bytes)
+```
+Only the first 4 bytes carry meaning; the rest of the 512-byte buffer is `0x00`.
 
 ### `30 05 04 00 00 <flags>` — Clock display options
 ```
@@ -53,23 +76,53 @@ Bitmask: bit0 constant/always set in every sample (purpose unconfirmed), bit1
 = show battery percentage. Only one flag was exercised, so other bits are
 unverified. Switching 24h↔12h format does **not** touch this byte.
 
+**Full frame example (battery status ON):**
+```
+30 05 04 00 00 03 00 00 00 00 00 00 00 00 00 00 ... (zero-padded to 512 bytes)
+```
+Only the first 6 bytes carry meaning; the rest of the 512-byte buffer is `0x00`.
+
 ### `40 09 <date/time>` — Set RTC / wall-clock time
-```
-byte 0     0x40                     opcode
-byte 1     0x09                     constant sub-type marker
-byte 2-3   year, little-endian u16  e.g. 2026 → ea 07
-byte 4     month (1-12, binary)
-byte 5     day (1-31, binary)
-byte 6     hour (0-23, binary — always stored as 24h internally)
-byte 7     minute (0-59, binary)
-byte 8     second (0-59, binary)
-byte 9     display-format flag: 1 = show as 24h, 0 = show as 12h
-byte 10    constant 0x01 in every sample here — meaning unresolved
-rest       zero-padded to 512 bytes
-```
+
+| Byte(s) | Field | Encoding |
+|---|---|---|
+| 0 | opcode | `0x40` |
+| 1 | sub-type marker | constant `0x09` |
+| 2–3 | year | little-endian u16 (e.g. 2026 → `ea 07`) |
+| 4 | month | binary, 1–12 |
+| 5 | day | binary, 1–31 |
+| 6 | hour | binary, 0–23 — always stored as 24h internally |
+| 7 | minute | binary, 0–59 |
+| 8 | second | binary, 0–59 |
+| 9 | display-format flag | `1` = show as 24h, `0` = show as 12h |
+| 10 | unresolved constant | `0x01` in every sample so far |
+| 11–511 | padding | zero-filled to 512 bytes total |
+
 All fields are **local wall-clock time**, not UTC, not epoch. The 12h/24h
 toggle only changes byte 9 — the stored hour value itself is always 24h
 binary, confirmed by comparing the "12hr" and "24hr" test cases side by side.
+
+**Worked byte examples:**
+
+*Sep 15, 2026, 14:30:00, 24h display:*
+```
+40 09 EA 07 09 0F 0E 1E 00 01 01 00 00 00 00 00 ... (zero-padded to 512 bytes)
+```
+| `40` | `09` | `EA 07` | `09` | `0F` | `0E` | `1E` | `00` | `01` | `01` |
+|---|---|---|---|---|---|---|---|---|---|
+| opcode | marker | year 2026 | month 9 | day 15 | hour 14 | min 30 | sec 0 | 24h | const |
+
+*Dec 25, 2026, 08:05:30, 12h display:*
+```
+40 09 EA 07 0C 19 08 05 1E 00 01 00 00 00 00 00 ... (zero-padded to 512 bytes)
+```
+| `40` | `09` | `EA 07` | `0C` | `19` | `08` | `05` | `1E` | `00` | `01` |
+|---|---|---|---|---|---|---|---|---|---|
+| opcode | marker | year 2026 | month 12 | day 25 | hour 8 | min 5 | sec 30 | 12h | const |
+
+Note the hour is `08` (24h binary) in both examples' internal representation
+even though the second example displays in 12h mode — only byte 9 changes how
+it's rendered on the panel, never the stored hour value itself.
 
 ### `31 02 <a> <b>` — Select content-engine mode
 ```
@@ -80,6 +133,12 @@ binary, confirmed by comparing the "12hr" and "24hr" test cases side by side.
 ```
 Sent before the corresponding `30 06 05 ...` apply command. Only two
 combinations were observed — value space beyond these two is unknown.
+
+**Full frame example (image-backed content):**
+```
+31 02 00 04 00 00 00 00 00 00 00 00 00 00 00 00 ... (zero-padded to 512 bytes)
+```
+Only the first 4 bytes carry meaning; the rest of the 512-byte buffer is `0x00`.
 
 ### `30 06 05 00 00 00 <val>` — Apply/commit content
 ```
@@ -100,6 +159,12 @@ the bitmap client-side before the bulk upload. Text Templates are the
 exception — there the byte genuinely changes with the chosen filter, meaning
 that's a real device-side effect applied to procedurally-rendered text, not
 to images.
+
+**Full frame example (apply image content):**
+```
+30 06 05 00 00 00 02 00 00 00 00 00 00 00 00 00 ... (zero-padded to 512 bytes)
+```
+Only the first 7 bytes carry meaning; the rest of the 512-byte buffer is `0x00`.
 
 ## Observed sequences per action
 
