@@ -1,0 +1,43 @@
+Okay, these should make things more clear (record 10, record 11)
+
+This is a big one — these two captures resolve several open questions and directly answer your original question about the lid-close clock time. Let me walk through the key findings, then I'll update the protocol doc.
+
+1. Brightness exists — I was wrong
+
+35 01 <val> — a single byte, raw brightness level. Confirmed: "Set brightness 1" → 35 01 0f, "Set brightness 3" → 35 01 bc. I'd told you there was no brightness command; that was wrong, and I should have hedged harder given I was reasoning from absence of evidence rather than a confirmed negative.
+
+2. New command: Boot Animation toggle
+
+32 02 <a> <b> — 02 02 = on, 00 00 = off. Cleanly binary, confirmed across two toggles.
+
+3. Re-interpreting 30 05 04 00 00 <flags>
+
+I'd called this "battery status" from record9. But in this session it tracks Display Off/On instead (00 off, 03 on) — completely unrelated to battery, same command, different meaning depending on context. That means my original label was too narrow: this byte is more likely a general panel-enable bitmask that happens to combine multiple things, and "battery visible" was just one bit I saw moving in one session. Needs to be documented as a multi-purpose flags byte, not a single-purpose one.
+
+4. Byte 10 of the time command — solved
+
+Across three sessions, on three different real dates:
+
+Sep 13 (Sunday) → 00
+Sep 14 (Monday) → 01
+Sep 15 (Tuesday) → 02
+
+That's day-of-week, Sunday = 0. The "unresolved constant" was never constant — I just didn't have samples spanning enough different weekdays before now.
+
+5. The answer to your original question
+
+In record10, at the CLOSE LID marker, nothing happens immediately. About 9 seconds later, this exact burst goes out:
+
+40 09 ea 07 09 0f 12 01 13 01 02   ← time-set (current local time + weekday)
+35 01 4f                           ← brightness
+31 02 00 04                        ← generic resync prelude
+33 01 03                           ← speed
+30 05 02 00 04                     ← theme
+
+Then nothing else fires at reopen — no new time-set. So: MyASUS re-syncs the clock and full panel state once, right as the lid closes (not continuously, not at wake). That's exactly the mechanism your Linux driver needs to replicate — hook the lid-close event and push this same burst, current time included, right before the display goes to sleep.
+
+6. Bulk endpoint reality check
+
+The SAMPLE_IMAGE/filter bulk payload isn't a one-shot static image — it's 538 separate 8704-byte bulk chunks, continuously streamed and changing frame-to-frame for as long as that content stays active. "Filters" like hatch door/circuit are live animations pushed as a video-like stream, not a single uploaded bitmap. That also explains why the apply command's filter byte never changed for images — the actual filter identity lives entirely in the streamed pixel data, exactly as suspected, just more literally (continuous stream) than I'd assumed (single push).
+
+Let me fold all of this into the protocol doc now.

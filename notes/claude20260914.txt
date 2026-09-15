@@ -1,0 +1,54 @@
+The first 6 packets appeared after setting animation (no time change ~17:20 14 Sep 2026) and the next 6 after time change ~19:20 13 Sep 2026. Does this help? (record 6)
+
+Yes — this is exactly what you're after. This is a genuinely new command (0x40), separate from anything in the public zenvision-linux docs, and it lines up cleanly with real-world time in both captures.
+
+Decoded payload
+40 09 ea 07 09 0e 11 13 3b 01 01 00 00 ...   (captured 2026-09-14, local 17:19:59)
+40 09 ea 07 09 0d 13 14 27 01 00 00 00 ...   (captured 2026-09-13, local 19:20:39)
+Byte(s)	Value (pkt 1 / pkt 2)	Meaning
+40	constant	Opcode: set RTC/clock
+09	constant	sub-type / field-count marker
+ea 07	ea 07 both	Year, little-endian uint16 → 0x07EA = 2026
+09	09 both	Month, plain binary (not BCD) → September
+0e / 0d	14 / 13	Day — matches Sep 14 vs Sep 13 exactly
+11 / 13	17 / 19	Hour — matches 17:xx vs 19:xx exactly
+13 / 14	19 / 20	Minute — matches :19 vs :20 exactly
+3b / 27	59 / 39	Second — matches .343s-after-59 and .703s-after-39 almost to the millisecond
+01	01 both	constant flag (purpose unclear yet — see below)
+next byte	01 / 00	varies — worth pinning down (see below)
+
+Every field lines up with your local (BST, UTC+1) wall-clock time at the moment of capture, not UTC — so this command carries local time as plain binary fields, year little-endian, everything else single-byte, not BCD and not a packed epoch.
+
+This is very likely your bug
+
+If your current Linux driver is sending a Unix epoch, UTC time, or BCD-encoded fields, that would produce exactly the symptom you described ("completely off," not just an hour out for timezone). To fix it, build the same 512-byte interrupt-OUT frame to endpoint 0x03:
+
+byte 0:    0x40
+byte 1:    0x09
+byte 2-3:  year, little-endian uint16 (e.g. 2026 → ea 07)
+byte 4:    month (1-12, binary)
+byte 5:    day (1-31, binary)
+byte 6:    hour (0-23, binary, 24h)
+byte 7:    minute (0-59, binary)
+byte 8:    second (0-59, binary)
+byte 9:    0x01 (constant, unconfirmed purpose)
+byte 10+:  zero (or the trailing byte that varied — see below)
+rest:      zero-padded to 512 bytes
+
+Crucially: convert to local time (with DST applied) before filling this in — on Linux that means localtime()/struct tm in the system's configured zone, not gmtime().
+
+Two loose ends worth nailing down
+Byte 9 (01 in both): Sep 13, 2026 is a Sunday and Sep 14 is a Monday — different weekdays but identical byte, so this isn't a day-of-week field despite the position. Could be a "valid"/"apply" flag. Try omitting or zeroing it and see if the clock still updates, or capture a case where it might plausibly change (e.g. right as MyASUS starts vs. a manual resync).
+Byte 10 (01 vs 00, the one that differs): this is the most interesting unexplained bit. Possible candidates: a DST flag (unlikely — both dates are within BST), a "did the minute/hour just roll over" flag, or leftover framing from a second concatenated command. Try capturing several more of these 40 09... packets across different sessions and see what that byte correlates with — that's your best way to resolve it experimentally.
+
+Once you've got this working, it'd be a genuinely useful contribution back to tarpediem/zenvision-linux — this command isn't in their PROTOCOL.md at all.
+
+Please review these packets and construct a refined, detailed protocol.md. Highlight any remaining unknowns. (record 9)
+
+Biggest correction: 33 01 <n> is speed, not theme. 30 05 02 00 <n> is the real theme-select command. Every theme test (theme1/speed1, theme1/speed2, theme2/speed2, etc.) confirms this cleanly — the 33 01 value tracks the labeled speed, and the 30 05 02 00 value tracks the labeled theme number, independently.
+
+Time-set command, now fully resolved: the format-flag byte (24h vs 12h) is byte 9 of the 40 09 ... command — confirmed by your 24hr/12hr comparison at the same clock mode and battery setting, where that byte was the only thing that changed.
+
+Interesting side-finding on filters: for image-based content (SAMPLE_IMAGE, personal labels), the "apply" command's filter byte is always 02 regardless of which visual filter you picked in the app — meaning the filter is baked into the bitmap client-side before upload, not a device parameter. But for Text Templates, that same byte genuinely changes with the filter (01=none, 03=news ticker), so text-rendered content does get a real device-side effect ID.
+
+Full writeup with the command catalog, per-action sequences, and a clearly marked open-questions section (byte 10 of the time command, the flag bits in 30 05 04..., unmapped filter IDs, the still-unexplained EP 0x82 status word) is in the file above.

@@ -38,18 +38,42 @@ def set_clock(dev, clock: int):
     assert clock in range(1, 3), "clock must be 1-2"
     send_cmd(dev, bytes([0x30, 0x05, 0x01, clock]))
 
-# 30 05 04 00 00 <flag> - set show battery on clock display
-def set_show_battery(dev, show_battery: bool = True):
-    flag = 0x03 if show_battery else 0x01
-    send_cmd(dev, bytes([0x30, 0x05, 0x04, 0x00, 0x00, flag]))
+# 30 05 04 00 00 <x> - panel on/off and show/hide battery
+# WARNING: off is sticky - flags alone won't wake the panel, use resync()
+def set_panel(dev, on: bool = True, show_battery: bool = True):
+    x = 0x03 if show_battery else 0x01
+    x = x if on else 0x00
+    send_cmd(dev, bytes([0x30, 0x05, 0x04, 0x00, 0x00, x]))
 
-# 40 09 <datetime> <format> 01 — set date and time
+# Full state-resync burst (record13) - the only sequence that reliably wakes a display-off panel
+def resync(dev, speed: int = 3, theme: int = 4, brightness: int = 2, boot_animation: bool = True):
+    set_panel(dev, on=True)
+    send_cmd(dev, bytes([0x31, 0x02, 0x00, 0x04]))
+    set_time(dev)
+    set_boot_animation(dev, boot_animation)
+    set_brightness(dev, brightness)
+    set_speed(dev, speed)
+    set_theme(dev, theme)
+
+# 35 01 <brightness> - set brightness level
+BRIGHTNESS = {1: 0x0f, 2: 0x4f, 3: 0xbc}
+def set_brightness(dev, level: int = 2):
+    assert level in BRIGHTNESS, "brightness must be 1-3"
+    send_cmd(dev, bytes([0x35, 0x01, BRIGHTNESS[level]]))
+
+# 32 02 <x> <x> - boot animation on/off
+def set_boot_animation(dev, on: bool = True):
+    x = 0x02 if on else 0x00
+    send_cmd(dev, bytes([0x32, 0x02, x, x]))
+
+# 40 09 <datetime> <format> <weekday> - set date, time, format, and weekday
 def set_time(dev, dt=None, use_24h: bool = True):
     dt = dt or time.localtime()
     year_bytes = struct.pack("<H", dt.tm_year) # convert year to little-endian 2-byte representation
-    send_cmd(dev, bytes([0x40, 0x09, *year_bytes, dt.tm_mon, dt.tm_mday, dt.tm_hour, dt.tm_min, dt.tm_sec, int(use_24h), 0x01]))
+    weekday = (dt.tm_wday + 1) % 7 # device: Sunday = 0, Python: Monday = 0
+    send_cmd(dev, bytes([0x40, 0x09, *year_bytes, dt.tm_mon, dt.tm_mday, dt.tm_hour, dt.tm_min, dt.tm_sec, int(use_24h), weekday]))
 
 if __name__ == "__main__":
     dev = open_device()
 
-    set_time(dev)
+    resync(dev)
