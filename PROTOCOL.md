@@ -7,14 +7,14 @@ ZenVision is a 256 × 64 pixels, monochrome, 4-bit grayscale (16 levels) OLED pa
 Device `0b05:8835`, Interface `0`, vendor-specific class (0xFF). No kernel driver binds it.
 
 > [!NOTE]   
-> Protocol derived from USB packet captures on Windows via USBPcap, watching the MyASUS app talk to the panel. See raw capture records in [/usb-packets](/usb-packets/). Process details in [DISCOVERY.md](/DISCOVERY.md).
+> Protocol derived from USB packet captures on Windows via USBPcap, watching the MyASUS app talk to the panel. See raw capture records in [/usb-packets](/usb-packets/) and process details in [DISCOVERY.md](/DISCOVERY.md).
 
 ## Endpoints
 
 | Endpoint | Direction | Type | Size | Role |
 |---|---|---|---|---|
 | `0x03` | OUT | Interrupt | 512 bytes | Commands  |
-| `0x07` | OUT | Bulk | 8704 bytes | Framebuffer (17 x 512-byte packets)|
+| `0x07` | OUT | Bulk | 8704 bytes | Framebuffer |
 | `0x82` | IN | Interrupt | 18 bytes | Status |
  
 ## Commands
@@ -50,13 +50,9 @@ Sent after **speed**. The panel runs the theme autonomously.
 ### `30 06 05 00 00 00 <val>` apply/commit content
 ```
 30 06 05 00 00 00 01   Text Template, filter "none"
-30 06 05 00 00 00 02   image-backed content (constant regardless of filter)
+30 06 05 00 00 00 02   Static image content
 30 06 05 00 00 00 03   Text Template, filter "news ticker"
 ```
-Text Templates also push a real framebuffer over EP `0x07` (confirmed) —
-so this isn't "device renders text, image renders pixels"; everything is
-pixel-pushed. What the filter actually looks like on-panel is unverified —
-no visual confirmation, only command bytes.
 
 ### `31 02 <a> <b>` unknown
 ```
@@ -124,11 +120,8 @@ In the Time Mode 1/2 setup sequence it's sent once, right after `40 09`, with ro
 
 ## Framebuffer
 
-***Endpoint 0x07*** interrupt-OUT    
-512-byte zero-padded interrupt-OUT transfer. Leading bytes contain the command.
-
-Confirmed by direct inspection of a captured bulk payload: each 8704-byte
-transfer is 17 sub-packets of 512 bytes each.
+***Endpoint 0x07*** - Bulk OUT    
+One frame is a single 8704-byte bulk transfer. No commands. This endpoint carries pixels only.
 
 | Byte(s) | Meaning |
 |---|---|
@@ -137,20 +130,10 @@ transfer is 17 sub-packets of 512 bytes each.
 | bytes 2-3 | zero |
 | bytes 4-511 | payload |
 
-**8192 bytes total**, matching a 256×64 4-bit-grayscale
-framebuffer (2 packed pixels/byte).
+The concatenated payload is **8192 bytes total**, matching a 256×64 4-bit-grayscale framebuffer (2 packed pixels/byte). Packets 0-15 are full (16 × 508 = 8128 bytes); the remaining 64 bytes land in packet 16, whose payload area is padded out to 512.
 
 - **Static content**: Single chunk per apply. (MyASUS text templates)
 - **Streamed content**: Streamed continuously for as long as it's active. Filters are live animations in the pixel data. (MyASUS custom theme, personal label)
-
-```python
-def send_frame(dev, framebuffer: bytes, filter_id: int = 0x02):
-    """framebuffer: pre-framed 8704-byte payload (see table above).
-    filter_id: 0x02 image content, 0x01/0x03 text template filters."""
-    send_cmd(dev, bytes([0x31, 0x02, 0x00, 0x04]))
-    send_cmd(dev, bytes([0x30, 0x06, 0x05, 0x00, 0x00, 0x00, filter_id]))
-    dev.write(IMG_EP, framebuffer)
-```
 
 ## Settings Change Sequence
 

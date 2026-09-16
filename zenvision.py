@@ -89,9 +89,32 @@ def resync(dev, speed: int = 3, theme: int = 4, brightness: int = 2, boot_animat
     set_speed(dev, speed)
     set_theme(dev, theme)
 
+# RECOVERY SEQUENCE
+def recovery(dev):
+    # power off
+    send_cmd(dev, bytes([0x30, 0x05, 0x04]))
+    time.sleep(0.1)
+    send_cmd(dev, bytes([0x31, 0x02, 0x00, 0x04]))
+    time.sleep(3)
+    # power on
+    send_cmd(dev, bytes([0x30, 0x05, 0x04, 0x00, 0x00, 0x00, 0x03]))
+    time.sleep(0.1)
+    send_cmd(dev, bytes([0x31, 0x02, 0x00, 0x04]))
+    time.sleep(0.1)
+    send_cmd(dev, bytes([0x40, 0x09, 0xea, 0x07, 0x09, 0x0f, 0x14, 0x27, 0x00, 0x01, 0x02]))
+    time.sleep(0.5)
+    send_cmd(dev, bytes([0x32, 0x02, 0x02, 0x02]))
+    time.sleep(2)
+    send_cmd(dev, bytes([0x35, 0x01, 0x4f]))
+    time.sleep(0.1)
+    send_cmd(dev, bytes([0x33, 0x01, 0x03]))
+    time.sleep(0.1)
+    send_cmd(dev, bytes([0x30, 0x05, 0x02, 0x00, 0x04]))
+
 if __name__ == "__main__":
     dev = open_device()
 
-    set_clock(dev, 1)
-    set_speed(dev, 2)
-    set_time(dev)
+    # set_speed(dev, 2)
+    # set_theme(dev, 4)
+
+    recovery(dev)
