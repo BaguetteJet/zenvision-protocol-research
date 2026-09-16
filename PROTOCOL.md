@@ -26,7 +26,7 @@ Leading bytes contain the command, 512-byte zero-padded.
 30 05 01 01   time mode 1
 30 05 01 02   time mode 2
 ```
-The panel runs the clock layout autonomously. Followed by **speed** and **datetime**.
+Send **battery icon** before Time mode 1. The panel runs the clock layout autonomously. Both always followed by **speed** and **datetime**.
 
 ### `30 05 02 00 <theme>` set built-in theme
 ```
@@ -35,31 +35,31 @@ The panel runs the clock layout autonomously. Followed by **speed** and **dateti
 30 05 02 00 03   theme 3
 30 05 02 00 04   theme 4
 ```
-Sent after **speed**. The panel runs the theme autonomously.
+Send **speed** before theme. The panel runs the theme autonomously.
 
-### `30 05 04 00 00 <flags>` set panel state
+### `30 05 04 00 00 00 <val>` set power
 ```
-30 05 04 00 00 03   Display On, battery shown
-30 05 04 00 00 01   Display On, battery hidden
-30 05 04 00 00 00   Display Off
+30 05 04               power off
+30 05 04 00 00 00 01   power on, battery icon off
+30 05 04 00 00 00 03   power on, battery icon on
+```
+Power off followed by **screen sweep off**. 
+
+Battery icon only visible in Time mode 1 and during the lid close animation.
+
+### `30 06 05 00 00 00 00 <val>` apply/commit content
+```
+30 06 05 00 00 00 00 01   filter "none"
+30 06 05 00 00 00 00 02   Static content
+30 06 05 00 00 00 00 03   filter "news ticker"
 ```
 
-> [!CAUTION]   
-> **Sending `30 05 04 00 00 00` (Display Off) has not been reliably recoverable from Linux.** Every capture showing successful recovery was taken on Windows, where the panel does come back. Replicating that same recovery burst from a Linux implementation has consistently **failed** to turn the display back on. The cause is unresolved. Possibly a missing precursor command, pacing/timing sensitivity, or something specific to how libusb/the kernel handles this device versus the Windows driver stack. **Treat this command as high-risk on Linux until a working recovery path is confirmed.**
-
-### `30 06 05 00 00 00 <val>` apply/commit content
+### `31 02 <a> <b>` set screen sweep
 ```
-30 06 05 00 00 00 01   Text Template, filter "none"
-30 06 05 00 00 00 02   Static image content
-30 06 05 00 00 00 03   Text Template, filter "news ticker"
+31 02 00 04   screen sweep off
+31 02 02 03   screen sweep on
 ```
-
-### `31 02 <a> <b>` unknown
-```
-31 02 00 04   seen before/after nearly every action
-31 02 02 03   seen for Time Mode 2 and Text Template filter "none"
-```
-Position in sequence isn't fixed. Real purpose unresolved.
+Only visible for Time Mode 2 and Text Template filter "none" = horizontal swipe animation.
 
 ### `32 02 <a> <b>` set boot animation
 ```
@@ -135,7 +135,7 @@ The concatenated payload is **8192 bytes total**, matching a 256×64 4-bit-grays
 - **Static content**: Single chunk per apply. (MyASUS text templates)
 - **Streamed content**: Streamed continuously for as long as it's active. Filters are live animations in the pixel data. (MyASUS custom theme, personal label)
 
-## Settings Change Sequence
+## Apply Settings Sequence
 
 Sequence of commands sent after any setting changes in the MyASUS Exclusives settings menu. 
 
