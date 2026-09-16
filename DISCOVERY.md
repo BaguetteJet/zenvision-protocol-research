@@ -83,3 +83,97 @@ bursts from other actions (or the same action with one variable changed) to
 isolate which bytes correspond to which setting. Comment-per-action logging
 during capture (right-click a frame → Edit/Add Packet Comment) made this
 dramatically easier than reconstructing intent after the fact.
+
+## Capture provenance
+
+Every command burst in `usb-packets/` was tagged at capture time with the
+exact action taken in the ASUS app (MyASUS / Armoury Crate):
+
+| Capture | What it covers |
+|---|---|
+| `record9` | Themes, clock modes, time-set, content apply (command channel only) |
+| `record10` | Lid close behavior, brightness, continuous image streaming (EP `0x07`) |
+| `record11` | Brightness levels, boot-animation toggle, display off/on |
+| `record12` | Brightness level 2, full state-resync burst |
+| `record13` | Display off/on with the full state-resync burst |
+| `record14` | Clock modes (`f1 03` + EP `0x82` reply), Text Template filters, bulk-frame framing |
+| `record15` | A Linux driver's recovery attempt (failed) — byte-identical to record13's burst |
+| `record16` | Unfiltered capture of the app's successful recovery under Windows |
+
+Records 13/15 are filtered exports; record16 is the only unfiltered one.
+
+## The display-off latch
+
+The full investigation that led to the CAUTION in `PROTOCOL.md`:
+
+1. A Linux driver sent `30 05 04 00 00 00` (display off) — the panel went
+   black and stayed black. The ASUS app's Display Off → On cycle (record13)
+   revived it.
+2. Replicating the app's cycle byte-for-byte from Linux (record15) did
+   **not** revive it, even with the app's pacing (~265 ms after time-set,
+   ~1.5 s before speed).
+3. Also failed: flags-only on, theme commands, a USB bus reset
+   (`dev.reset()`) followed by the on-burst, and pushing a white 8704-byte
+   framebuffer. The `f1 03` state query shows the firmware fully alive and
+   processing every command (state code tracks theme/clock/image content) —
+   only the panel itself stays black. The latch even survived a Windows
+   reboot (incident 1).
+4. Record16 (unfiltered) shows the app's successful recovery is the *same*
+   nine commands — the only extras are a `SET_IDLE` control transfer to the
+   HID interface and two EP `0x84` IN polls. Neither is reproducible from
+   Linux as-is: the kernel's `usbhid` driver holds the HID interface, and
+   the device stalls the request otherwise.
+5. NAK anomaly: in record16 the device NAK'd the app's time-set write for
+   263 s and the brightness write for 1457 s before accepting them (the
+   Windows stack retries interrupt-OUT indefinitely; libusb times out).
+   Unconfirmed whether this patience is part of the recovery.
+
+Conclusion: treat the display-off byte as irreversible from Linux.
+
+## Comparison to the original `zenvision-linux` protocol docs
+
+What this research confirms was **right**:
+- Device identity (`0b05:8835`), interface 0 as vendor-specific/class 0xFF.
+- Endpoint roles: `0x03` interrupt-OUT as the command channel, `0x07`
+  bulk-OUT for framebuffer data, `0x82` interrupt-IN for status.
+- The general command shape: short meaningful prefix, zero-padded to 512
+  bytes, `0x30`-family for apply/configure, `0x31`-family for content mode.
+- The MCU free-runs its own themes (including the clock) when nothing is
+  actively driving the panel.
+- The 8704-byte frame framing (17 × 512-byte packets, index byte 0, end
+  marker `01` at packet 16's byte 1) — verified byte-for-byte against
+  pcapng payloads.
+
+What it found **wrong or incomplete**:
+- **Theme selection was misattributed**: `33 01 IDX` is actually the speed
+  command; the real theme-select is `30 05 02 00 IDX`.
+- **Brightness was misattributed**: the docs' `31 02 BB 03` framing is not
+  what MyASUS sends; brightness is a separate `35 01 <raw>` command with
+  observed levels `0x0f` / `0x4f` / `0xbc`.
+- **No time-set command documented**: `40 09 …` (drives the lid-close
+  clock) was missing entirely.
+- **No clock-mode, battery, display-power, or boot-animation commands**:
+  this research adds `30 05 01`, `30 05 04`, `32 02`, `35 01`, `31 02`,
+  and the `30 06 05` apply variants.
+- **The bulk endpoint was documented as a one-shot image**: it is a
+  continuous 8704-byte chunk stream for image content, and a single framed
+  frame for text templates.
+
+## Open questions
+
+- **The display-off latch** — see above. The app's recovery adds only
+  `SET_IDLE` + HID polls + multi-minute NAK patience, none reproducible
+  from Linux as-is.
+- **`31 02 <a> <b>` value space** — only `00 04` and `02 03` observed.
+- **`f1 03` reply semantics** — the rest of the 512-byte reply is zero;
+  unknown if other query IDs exist.
+- **4bpp pixel packing** — the 17×512 framing is verified, but the
+  per-pixel nibble order / pair swap is still taken from the
+  `zenvision-linux` docs, not independently re-verified against a rendered
+  capture.
+- **Brightness raw-value scale** — levels 1–3 are `0x0f` / `0x4f` / `0xbc`
+  (not linear); intermediate values untested.
+- **Day-of-week bytes Wed–Sat (`03`–`06`)** — only Sun/Mon/Tue observed;
+  the rest follows the Sunday=0 scheme but is unverified.
+- **`30 05 04` other bits** — only bits 0 and 1 observed; the byte does
+  not affect the `f1 03` state code.
