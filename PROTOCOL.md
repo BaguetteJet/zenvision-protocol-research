@@ -102,10 +102,12 @@ Applies only to built-in content (theme, clock, animations).
 35 01 0F   brightness 1 dim
 35 01 4F   brightness 2 
 35 01 BC   brightness 3 bright
+
+35 01 00-FF  custom brightness 0-255
 ```
 - part of [settings sequence](#settings-sequence)
 
-Applies only to built-in content (theme, clock, animations). Only these three levels are known.
+Applies only to built-in content (theme, clock, animations). Only three levels used by MyASUS app. Custom values 0-255 (`00`-`FF`) work.
 
 ### `40 09 <time>` set clock time
 | Byte(s) | Field | Encoding | Example
