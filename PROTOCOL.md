@@ -1,13 +1,13 @@
 # ZenVision Protocol
 
-USB protocol to communicate with the ZenVision display built into the lid of the ASUS ZenBook 14X OLED Space Edition (UX5401ZAS)
+USB protocol to communicate with the ZenVision display built into the lid of the ASUS ZenBook 14X OLED Space Edition (UX5401ZAS).
 
-ZenVision is a 256 × 64 pixels, monochrome, 4-bit grayscale (16 levels) OLED panel.
+The ZenVision display is a 256 x 64 pixels, monochrome, 4-bit grayscale (16 levels) OLED panel.
 
 Device `0b05:8835`, Interface `0`, vendor-specific class (0xFF). No kernel driver binds it.
 
 > [!NOTE]   
-> Protocol derived from USB packet captures on Windows via USBPcap, watching the MyASUS app talk to the panel. See raw capture records in [/usb-packets](/usb-packets/) and process details in [DISCOVERY.md](/DISCOVERY.md).
+> The protocol is derived from USB packet captures on Windows via USBPcap, watching the MyASUS app was communicate with the panel. See raw capture records in [/usb-packets](/usb-packets/) and process details in [DISCOVERY.md](/DISCOVERY.md).
 
 ## Endpoints
 
@@ -15,18 +15,23 @@ Device `0b05:8835`, Interface `0`, vendor-specific class (0xFF). No kernel drive
 |---|---|---|---|---|
 | `0x03` | OUT | Interrupt | 512 bytes | Commands  |
 | `0x07` | OUT | Bulk | 8704 bytes | Framebuffer |
-| `0x82` | IN | Interrupt | 18 bytes | Status |
+| `0x82` | IN | Interrupt | 18 bytes | Reponse |
  
 ## Commands
 ***Endpoint 0x03*** - Interrupt OUT   
 Leading bytes contain the command, 512-byte zero-padded. 
+
+Sample MyASUS sequences containing each command listed as bullet points.
 
 ### `30 05 01 <mode>` set clock layout
 ```
 30 05 01 01   time mode 1
 30 05 01 02   time mode 2
 ```
-Send **battery icon** before Time mode 1. The panel runs the clock layout autonomously. Both always followed by **speed** and **datetime**.
+- power on > **time mode 1** > speed > datetime
+- screen sweep on > **time mode 2** > speed > datetime
+
+The panel runs clock layout autonomously.
 
 ### `30 05 02 00 <theme>` set built-in theme
 ```
@@ -35,7 +40,9 @@ Send **battery icon** before Time mode 1. The panel runs the clock layout autono
 30 05 02 00 03   theme 3
 30 05 02 00 04   theme 4
 ```
-Send **speed** before theme. The panel runs the theme autonomously.
+- speed > **theme**
+
+The panel runs the theme autonomously.
 
 ### `30 05 04 00 00 00 <val>` set power
 ```
@@ -43,29 +50,39 @@ Send **speed** before theme. The panel runs the theme autonomously.
 30 05 04 00 00 00 01   power on, battery icon off
 30 05 04 00 00 00 03   power on, battery icon on
 ```
-Power off followed by **screen sweep off**. 
+- **power off** > screen sweep off
+- **power on** > time mode 1 > speed > datetime
 
 Battery icon only visible in Time mode 1 and during the lid close animation.
 
-### `30 06 05 00 00 00 00 <val>` apply/commit content
+### `30 06 05 00 00 00 00 <mode>` set content mode
 ```
-30 06 05 00 00 00 00 01   filter "none"
-30 06 05 00 00 00 00 02   Static content
-30 06 05 00 00 00 00 03   filter "news ticker"
+30 06 05 00 00 00 00 01   content mode 1 - filter "none"
+30 06 05 00 00 00 00 02   content mode 2 - 
+30 06 05 00 00 00 00 03   content mode 3 - filter "news ticker"
 ```
+- screen sweep off > **content mode 3** > speed
+
+⭐ **TO BE CONFIRMED**
 
 ### `31 02 <a> <b>` set screen sweep
 ```
 31 02 00 04   screen sweep off
 31 02 02 03   screen sweep on
 ```
-Only visible for Time Mode 2 and Text Template filter "none" = horizontal swipe animation.
+- power off > **screen sweep off**
+- **screen sweep off** > content mode 3 > speed
+- **screen sweep on** > time mode 2 > speed > datetime
+- content mode 1 > **screen sweep on**
+
+"Screen sweep" is an animation of horizontal bars sweeping across the screen. It interrupts certain currently playing built-in content every few seconds. Only observed for time mode 2 and text template set to filter "none" (content mode 1). Presumably intented to reduce OLED burn-in risk with static content.
 
 ### `32 02 <a> <b>` set boot animation
 ```
 32 02 02 02   boot animation on
 32 02 00 00   boot animation off
 ```
+- part of [settings sequence](#settings-sequence)
 
 ### `33 01 <speed>` set animation speed
 ```
@@ -73,7 +90,12 @@ Only visible for Time Mode 2 and Text Template filter "none" = horizontal swipe 
 33 01 02   speed 2
 33 01 03   speed 3 fast
 ```
-Applies only to built-in content (theme, clock).
+- **speed** > theme
+- screen sweep off > content mode 3 > **speed**
+- power on > time mode 1 > **speed** > datetime
+- screen sweep on > time mode 2 > **speed** > datetime
+
+Applies only to built-in content (theme, clock, animations).
 
 ### `35 01 <val>` set brightness
 ```
@@ -81,10 +103,11 @@ Applies only to built-in content (theme, clock).
 35 01 4F   brightness 2 
 35 01 BC   brightness 3 bright
 ```
-Applies only to built-in content (theme, clock). Only these three levels are known.
+- part of [settings sequence](#settings-sequence)
+
+Applies only to built-in content (theme, clock, animations). Only these three levels are known.
 
 ### `40 09 <time>` set clock time
-
 | Byte(s) | Field | Encoding | Example
 |---|---|---|---|
 | 0-1 | command | 0x40 0x09 | `40 09` |
@@ -97,18 +120,20 @@ Applies only to built-in content (theme, clock). Only these three levels are kno
 | 9 | format | 1 = 24h, 0 = 12h | `01` 24h |
 | 10 | weekday | 0 = Sunday … 6 = Saturday | `05` friday |
 
+```
+40 09 EA 07 09 0F 0E 1E 00 01 02   2026 Sep 15 14:30:00 24h Tue
+40 09 EA 07 0C 19 08 05 1E 00 05   2026 Dec 25 08:05:30 12h Fri
+```
+- power on > **time mode 1** > speed > datetime
+- screen sweep on > **time mode 2** > speed > datetime
+
 Time displayed on the lid close animation and both time modes.
 
-```
-40 09 EA 07 09 0F 0E 1E 00 01 02   Sep 15 2026 (Tue) 14:30:00, 24h
-40 09 EA 07 0C 19 08 05 1E 00 05   Dec 25 2026 (Fri) 08:05:30, 12h
-```
-
-### `F1 03` request content state
+### `F1 03` query content state
 ```
 F1 03
 ```
-**Endpoint 0x82** replies with a 512-byte status code:
+**Endpoint 0x82** replies with a 512-byte ASCII status code:
 
 | Reply | Content engine |
 |---|---|
@@ -116,12 +141,12 @@ F1 03
 | `02` | built-in theme |
 | `07` | image content |
 
-In the Time Mode 1/2 setup sequence it's sent once, right after `40 09`, with roughly a 1.5s pause beforehand. Sending it immediately risks a timeout.
+⭐ **TO BE CONFIRMED**
 
 ## Framebuffer
 
 ***Endpoint 0x07*** - Bulk OUT    
-One frame is a single 8704-byte bulk transfer. No commands. This endpoint carries pixels only.
+One frame is a single 8704-byte bulk transfer. No commands. This endpoint carries pixel data only.
 
 | Byte(s) | Meaning |
 |---|---|
@@ -135,41 +160,23 @@ The concatenated payload is **8192 bytes total**, matching a 256×64 4-bit-grays
 - **Static content**: Single chunk per apply. (MyASUS text templates)
 - **Streamed content**: Streamed continuously for as long as it's active. Filters are live animations in the pixel data. (MyASUS custom theme, personal label)
 
-## Apply Settings Sequence
+⭐ **TO BE CONFIRMED**
 
-Sequence of commands sent after any setting changes in the MyASUS Exclusives settings menu. 
-
-Display On, brightness, boot animation, all trigger the seven-command burst, with just one value changed. Every field is resent at its current value, not only the one that changed:
+## Settings Sequence
+Any settings change in the MyASUS Exclusives settings menu triggers the following seven-command burst, with just one value changed. Every field is resent at its current value:
 
 ```
-30 05 04 00 00 <flags>    panel state
-31 02 00 04               unknown
-40 09 <time>              datetime, format, weekday
-32 02 <a> <b>             boot animation
-35 01 <val>               brightness
+30 05 04 00 00 00 <val>   power on/off
+31 02 00 04               screen sweep off
+40 09 <time> ...          datetime, format, weekday
+32 02 <a> <b>             boot animation on/off
+35 01 <val>               brightness level
 33 01 <speed>             speed
 30 05 02 00 <theme>       theme
 ```
 
-## Observed sequences
+⭐ **TO BE CONFIRMED** if other content form displayed, is theme command replaced?
 
-| App action | Command sequence |
-|---|---|
-| Display Off | `30 05 04 00 00 00` > `31 02 00 04` |
-| Display On | full settings sequence (see above) |
-| Set brightness | full settings sequence (see above) |
-| Boot animation Off  | full settings sequence (see above) |
-| Boot animation On | full settings sequence (see above) |
-| Theme 1-4 | `33 01 <S>` > `30 05 02 00 <N>` |
-| Time Mode 1 | `30 05 04 00 00 <flags>` > `33 01 <S>` > `30 05 01 01` > `40 09 <time>` > `F1 03` > response |
-| Time Mode 2 | `31 02 02 03` > `30 05 01 02` > `40 09 <time>` > `F1 03` > response |
-| Apply image or personal label | `31 02 00 04` > `30 06 05 00 00 00 02` > continuous frame stream |
-| Apply text template with filter | `31 02 00 04` or `31 02 02 03` > `30 06 05 00 00 00 <F>` > one frame → `33 01 <S>` |
+## Recovery
 
-Theme N, Speed S, Filter F
-
-## Open questions
-
-- `31 02 <a> <b>` purpose unknown.
-- Endpoint 0x82 18-byte telemetry. 
-- How to recover display after **Display Off** on Linux, see the caution above.
+If an unrecognised command is sent, the screen goes black and won't even show lid animation. To recover, run full [settings sequence](#settings-sequence).
