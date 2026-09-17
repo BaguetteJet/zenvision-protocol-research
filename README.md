@@ -1,4 +1,4 @@
-# zenvision-protocol
+# zenvision-protocol-research
 
 USB protocol to communicate with the ZenVision display built into the lid of the ASUS ZenBook 14X OLED Space Edition (UX5401ZAS).
 
