@@ -53,8 +53,8 @@ def set_content_mode(dev, mode: int):
 
 # 31 02 <a> <b> set screen sweep
 def set_screen_sweep(dev, sweep: bool = False):
-    x = 02 if sweep else 00
-    y = 03 if sweep else 04
+    x = 0x02 if sweep else 0x00
+    y = 0x03 if sweep else 0x04
     send_cmd(dev, bytes([0x31, 0x02, x, y]))
 
 # 32 02 <a> <b> boot animation on/off
@@ -85,21 +85,9 @@ def get_engine_state(dev) -> str:
     # response: '01' clock, '02' theme, '07' image
     return send_cmd(dev, bytes([0xf1, 0x03])).rstrip(b"\x00").decode("ascii")
 
-# Settings Sequence (with theme)
-def resync(dev, speed: int = 2, theme: int = 4, brightness: int = 2, boot_animation: bool = True):
-    set_battery(dev, on=True)
-    send_cmd(dev, bytes([0x31, 0x02, 0x00, 0x04]))
-    set_time(dev)
-    time.sleep(0.3)
-    set_boot_animation(dev, boot_animation)
-    set_brightness(dev, brightness)
-    time.sleep(1.5)
-    set_speed(dev, speed)
-    set_theme(dev, theme)
-
 # power off
 def power_off(dev):
-    send_cmd(dev, bytes([0x30, 0x05, 0x04]))
+    send_cmd(dev, bytes([0x30, 0x05, 0x04])) # power off
     send_cmd(dev, bytes([0x31, 0x02, 0x00, 0x04])) # screen sweep off
 
 # power on
@@ -110,15 +98,4 @@ def power_on(dev):
 if __name__ == "__main__":
     dev = open_device()
 
-    #send_cmd(dev, bytes([0x30, 0x05, 0x04, 0x00, 0x00, 0x00, 0x03]))
-    #send_cmd(dev, bytes([0x31, 0x02, 0x02, 0x03])) #swipe
-    #send_cmd(dev, bytes([0x31, 0x02, 0x00, 0x04])) #no swipe
-    #set_clock(dev, 2)
-    #set_time(dev)
-    #set_speed(dev, 2)
-    #set_theme(dev, 4)
-    set_brightness(dev, 1)
-    set_speed(dev, 1)
-    power_off(dev)
-    time.sleep(2)
-    power_on(dev)
+    set_time(dev)
