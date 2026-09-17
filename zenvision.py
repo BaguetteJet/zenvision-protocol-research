@@ -98,4 +98,35 @@ def power_on(dev):
 if __name__ == "__main__":
     dev = open_device()
 
-    set_time(dev)
+### Commands Sequences from MyASUS app
+
+### Select theme
+
+    # set_speed(dev, 2)            # choose 1-3
+    # set_theme(dev, 4)            # choose 1-4
+
+### Select clock layout
+
+    ## clock 1
+
+    # set_battery(dev, True)       # choose True/False
+    # set_clock(dev, 1)
+    # set_speed(dev, 2)            # choose 1-3
+    # set_time(dev, use_24h=True)  # choose True/False
+
+    ## clock 2
+
+    # set_screen_sweep(dev, True)
+    # set_clock(dev, 2)
+    # set_speed(dev, 2)            # choose 1-3
+    # set_time(dev, use_24h=True)  # choose True/False
+
+### Other 
+
+    # set_boot_animation(dev, True) # choose True/False
+    # set_brightness(dev, 2)        # choose 1-3
+
+## Power
+
+    # power_off(dev)
+    # power_on(dev)

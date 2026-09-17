@@ -1,0 +1,152 @@
+No.     Time           Source                Destination           Protocol Length Info
+   3881 42.795680      host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY - display powered off - set display off
+Frame 3881: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+Leftover Capture Data […]: 300504000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+   3882 42.796560      2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY - display powered off - set display off
+Frame 3882: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+
+No.     Time           Source                Destination           Protocol Length Info
+   3883 42.796906      host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY - display powered off - set display off
+Frame 3883: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+Leftover Capture Data […]: 310200040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+   3884 42.797545      2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY - display powered off - set display off
+Frame 3884: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+
+No.     Time           Source                Destination           Protocol Length Info
+   7049 96.427575      host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY SUCCESSFUL - display set on
+Frame 7049: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+Leftover Capture Data […]: 300504000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+   7050 96.428591      2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY SUCCESSFUL - display set on
+Frame 7050: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+
+No.     Time           Source                Destination           Protocol Length Info
+   7051 96.429031      host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY SUCCESSFUL - display set on
+Frame 7051: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+Leftover Capture Data […]: 310200040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+   7052 96.429586      2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY SUCCESSFUL - display set on
+Frame 7052: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+
+No.     Time           Source                Destination           Protocol Length Info
+   7053 96.429911      host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY SUCCESSFUL - display set on
+Frame 7053: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+Leftover Capture Data […]: 4009ea07090f142700010200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+   7080 96.694539      2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY SUCCESSFUL - display set on
+Frame 7080: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+
+No.     Time           Source                Destination           Protocol Length Info
+   7081 96.696561      host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY SUCCESSFUL - display set on
+Frame 7081: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+Leftover Capture Data […]: 320202020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+   7082 96.697537      2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY SUCCESSFUL - display set on
+Frame 7082: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+
+No.     Time           Source                Destination           Protocol Length Info
+   7083 96.781631      host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY SUCCESSFUL - display set on
+Frame 7083: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+Leftover Capture Data […]: 35014f000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+   7186 98.154539      2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY SUCCESSFUL - display set on
+Frame 7186: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+
+No.     Time           Source                Destination           Protocol Length Info
+   7187 98.154964      host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY SUCCESSFUL - display set on
+Frame 7187: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+Leftover Capture Data […]: 330103000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+   7188 98.155523      2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY SUCCESSFUL - display set on
+Frame 7188: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
+
+No.     Time           Source                Destination           Protocol Length Info
+   7189 98.156006      host                  2.1.3                 USB      539    URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY SUCCESSFUL - display set on
+Frame 7189: Packet, 539 bytes on wire (4312 bits), 539 bytes captured (4312 bits) on interface \\.\USBPcap2, id 0
+USB URB
+Leftover Capture Data […]: 300502000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+No.     Time           Source                Destination           Protocol Length Info
+   7190 98.156511      2.1.3                 host                  USB      27     URB_INTERRUPT out
+
+Packet comments
+    ATTEMPTING RECOVERY SUCCESSFUL - display set on
+Frame 7190: Packet, 27 bytes on wire (216 bits), 27 bytes captured (216 bits) on interface \\.\USBPcap2, id 0
+USB URB
