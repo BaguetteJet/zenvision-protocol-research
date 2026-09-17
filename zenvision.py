@@ -67,11 +67,15 @@ def set_speed(dev, speed: int):
     assert speed in range(1, 4), "speed must be 1-3"
     send_cmd(dev, bytes([0x33, 0x01, speed]))
 
-# 35 01 <brightness> set brightness level
+# 35 01 <brightness> set brightness level (1-3) or value (0-255)
 BRIGHTNESS = {1: 0x0f, 2: 0x4f, 3: 0xbc}
-def set_brightness(dev, level: int = 2):
-    assert level in BRIGHTNESS, "brightness must be 1-3"
-    send_cmd(dev, bytes([0x35, 0x01, BRIGHTNESS[level]]))
+def set_brightness(dev, level: int = 2, value: int | None = None):
+    if value is None:
+        assert level in BRIGHTNESS, "brightness level must be 1-3"
+        value = BRIGHTNESS[level]
+    else:
+        assert 0 <= value <= 0xff, "brightness value must be 0-255"
+    send_cmd(dev, bytes([0x35, 0x01, value]))
 
 # 40 09 <datetime> <format> <weekday> set date and time
 def set_time(dev, dt=None, use_24h: bool = True):
@@ -87,7 +91,7 @@ def get_engine_state(dev) -> str:
 
 # power off
 def power_off(dev):
-    send_cmd(dev, bytes([0x30, 0x05, 0x04])) # power off
+    send_cmd(dev, bytes([0x30, 0x05, 0x04, 0x00, 0x00, 0x00, 0x00])) # power off
     send_cmd(dev, bytes([0x31, 0x02, 0x00, 0x04])) # screen sweep off
 
 # power on
@@ -97,6 +101,38 @@ def power_on(dev):
 
 if __name__ == "__main__":
     dev = open_device()
+
+### Example usage:
+
+    # set_speed(dev, 2)            # choose 1-3
+    # set_theme(dev, 4)            # choose 1-4
+    # set_brightness(dev, 1)       # choose 1-3
+    # set_time(dev)
+    # time.sleep(2)
+    set_brightness(dev, 1)       # choose 1-3
+    BRIGHTNESS_VALUES = [
+    0x00,
+    0x0F,
+    0x20,
+    0x30,
+    0x40,
+    0x4F,
+    0x60,
+    0x70,
+    0x80,
+    0x90,
+    0xA0,
+    0xB0,
+    0xBC,
+    0xC0,
+    0xD0,
+    0xE0,
+    0xF0,
+    0xFF,
+    ]
+    # for value in BRIGHTNESS_VALUES:
+    #     send_cmd(dev, bytes([0x35, 0x01, value]))
+    #     time.sleep(1)
 
 ### Commands Sequences from MyASUS app
 

@@ -46,7 +46,7 @@ The panel runs the theme autonomously.
 
 ### `30 05 04 00 00 00 <val>` set power
 ```
-30 05 04               power off
+30 05 04 00 00 00 00   power off
 30 05 04 00 00 00 01   power on, battery icon off
 30 05 04 00 00 00 03   power on, battery icon on
 ```
